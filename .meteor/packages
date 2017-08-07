@@ -26,5 +26,11 @@ practicalmeteor:mocha             # A package for writing and running your meteo
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
 
 meteortoys:allthings
+
 settlin:materialize
 planettraining:material-design-icons-font
+
+accounts-base
+npm-bcrypt
+accounts-password
+accounts-ui
