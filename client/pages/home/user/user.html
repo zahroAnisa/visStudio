@@ -1,0 +1,9 @@
+<template name="user">
+  <button class="waves-effect waves-light btn {{#unless currentUser}} disabled {{/unless }}">
+    <i class="material-icons right ">supervisor_account</i>
+    Add role
+  </button>   
+   {{#if roleUser }} 
+    <p>you have role</p>
+   {{/if}} 
+</template>
