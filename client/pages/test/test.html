@@ -1,0 +1,10 @@
+<template name="test">  
+  <div class="container">
+    <a href="/test"><h1>Test list</h1></a>
+    <div class="collection"> 
+      {{#each menus}}
+        <a class="collection-item" href="{{url}}" target="_blank">{{title}}</a>
+      {{/each}}
+    </div>
+  </div>
+</template>
