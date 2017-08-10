@@ -1,0 +1,32 @@
+<template name="App_sortable">  
+  <div class="container">
+    <h2>Sortable List</h2>
+    <!-- {{> sortableList}} -->
+    {{> typeDefinition}}
+  </div>
+</template>
+
+
+<template name="typeDefinition">  
+  <div class="collection">
+    <div class="sortable source list-group" id="types">
+      {{#sortable items=links options=typesOptions}}
+        <div class="collection-item">
+          <i class="material-icons">shuffle</i>
+          <span class="title">{{order}} {{title}}</span>
+          <a href="{{url}}" target="_blank" class="secondary-content">{{url}}</a> 
+        </div>
+      {{/sortable}}
+    </div>
+  </div>
+</template>
+
+<template name="sortableItemTarget">
+  <div data-id="{{order}}" class="sortable-item removable well well-sm">
+   
+    <i class="sortable-handle mdi-action-view-headline pull-right"></i>
+    <span class="name">{{title}}</span>
+    <span class="badge">{{order}}</span>
+ 
+  </div>
+</template>

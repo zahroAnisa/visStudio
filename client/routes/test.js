@@ -28,3 +28,9 @@ testRoutes.route('/upload', {
   },
 });
 
+testRoutes.route('/sortable', {
+  action: function() {
+    BlazeLayout.render('App_body', { main: 'App_sortable' });
+  },
+});
+

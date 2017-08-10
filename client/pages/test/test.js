@@ -7,7 +7,8 @@ Template.test.onCreated(function() {
 Template.test.helpers({
   menus : [
     {url: '/test/login', title: 'login'},
-    {url: '/test/upload', title: 'Upload file'}
+    {url: '/test/upload', title: 'Upload file'},
+    {url: '/test/sortable', title: 'Sortable list'}
   ]
 });
 
