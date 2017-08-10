@@ -22,3 +22,9 @@ testRoutes.route('/login', {
   },
 });
 
+testRoutes.route('/upload', {
+  action: function() {
+    BlazeLayout.render('App_body', { main: 'upload' });
+  },
+});
+
