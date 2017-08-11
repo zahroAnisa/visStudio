@@ -9,19 +9,17 @@
 
 <template name="typeDefinition">  
   <div class="collection">
-    <div class="sortable source list-group" id="types">
-      {{#sortable items=links options=typesOptions}}
-        <div class="collection-item">
-          <i class="material-icons">shuffle</i>
-          <span class="title">{{order}} {{title}}</span>
-          <a href="{{url}}" target="_blank" class="secondary-content">{{url}}</a> 
-        </div>
-      {{/sortable}}
-    </div>
+    {{#sortable items=links animation="100" options=typesOptions}}
+      <div class="collection-item">
+        <i class="material-icons">shuffle</i>
+        <span class="title">{{order}} {{title}}</span>
+        <a href="{{url}}" target="_blank" class="secondary-content">{{url}}</a> 
+      </div>
+    {{/sortable}}
   </div>
 </template>
 
-<template name="sortableItemTarget">
+<!-- <template name="sortableItemTarget">
   <div data-id="{{order}}" class="sortable-item removable well well-sm">
    
     <i class="sortable-handle mdi-action-view-headline pull-right"></i>
@@ -29,4 +27,4 @@
     <span class="badge">{{order}}</span>
  
   </div>
-</template>
+</template> -->

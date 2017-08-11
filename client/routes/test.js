@@ -34,3 +34,10 @@ testRoutes.route('/sortable', {
   },
 });
 
+testRoutes.route('/group', {
+  action: function() {
+    BlazeLayout.render('App_body', { main: 'playerGroup' });
+  },
+});
+
+
