@@ -30,9 +30,9 @@
       <div class="col s6">
         <div class="card">
           <ul class="collection with-header">
-            <li class="collection-header"><h4>Group</h4></li>
-            {{#each playerGroupOne.playerId}}
-              {{> group }}
+            <li class="collection-header"><h4>Group</h4><p>{{playerGroupOne._id}}</p></li>
+            {{#each playerGroupOne.playerId }}
+              {{> group playerId=this playerGroupId=playerGroupOne._id}}
             {{/each}}
           </ul>
         </div>
@@ -57,10 +57,11 @@
     <div>
       <i class="material-icons">arrow_back</i>
       <span class="secondary-content">
-        {{thisName(this)}} 
+        {{thisName(this.playerId)}} 
       </span>
     </div>
   </li> 
 </template> 
+
 
 

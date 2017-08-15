@@ -18,7 +18,6 @@ Template.playerGroup.helpers({
     return PlayerGroup.find({});
   },
   playerGroupOne() {
-    // return PlayerGroup.findOne({"_id": id});
     return Session.get("playerGroupOne")
   },
 });
@@ -39,8 +38,16 @@ Template.group.helpers({
 Template.playerGroup.events({
   'change select'(event, template) {    
     let id = event.currentTarget.value    
-    // template.playerGroup.set( playerGroupOne, PlayerGroup.findOne({"_id": id}) )
     Session.set("playerGroupOne", PlayerGroup.findOne({"_id": id}));
-    console.log('events',id, Session.get("playerGroupOne"))
+    // console.log('events',id, Session.get("playerGroupOne"))
+  }
+});
+
+Template.group.events({
+  'click i'(event, template) {   
+    console.log('group.events', this, template.data, this.playerGroupId, this.playerId)
+    Meteor.call('playerGroup.update',this.playerGroupId, this.playerId, (err) => {
+
+    })
   }
 });
