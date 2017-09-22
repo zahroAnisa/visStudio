@@ -1,9 +1,19 @@
 <template name="layouts_single">
 
-<div class="container">
-    <h2>Single Player</h2>
+<body>
+	<div class="container">
+		<h2>Single Player</h2>
+		<div class="row">
+			{{> layouts_singleLeft}}
+			{{> layouts_singleRight}}
+		</div>
+	</div>
+</body>
 
-    <div class="row"> 
+
+</template>
+
+<template name="layouts_singleLeft">
 
       <div class="col s12 m12 l6">
         <div class="card"><!-- card left -->
@@ -11,28 +21,74 @@
             <li class="collection-header"><!-- li card left -->
             	<div class="row"><!-- div row card left -->
 			      <div class="col s6 m6 l6"><!-- button add -->
-			      	<a href="#modal-one" class="btn-floating btn-medium waves-effect waves-light red">
+			      	<a href="#modal1" class="btn-floating btn-medium waves-effect waves-light red">
 			      		<i class="material-icons">add</i>
 			      	</a>
 			      	<label>New</label>
 			      </div><!-- end button add -->
 
 			      	<!-- Modal add-->
-					<a href="#" class="modal" id="modal-one" aria-hidden="true">
-					  </a>
-					  <div class="modal-dialog">
-					    <div class="modal-header">
-					      <h2>Create Data Player</h2>
-					      <a href="#" class="btn-close" aria-hidden="true">×</a>
-					    </div>
-					    <div class="modal-body">
-					      <p>One modal example here! :D</p>
+					<!-- Modal Structure -->
+					  <div id="modal1" class="modal">
+					    <div class="modal-content">
+					    	<h4>Create Data Player</h4>
+					    	<form action="#"><!-- Form input create data user-->
+		                     <div class="row"><!-- Input name -->
+						        <div class="input-field col s12 m12 l12">
+		                          <input id="name" type="text" class="validate">
+		                          <label for="name">Name</label>
+		                        </div>
+						      </div><!-- End input name -->
+		                       <div class="row"><!-- Input address -->
+		                        <div class="input-field col s12 m12 l12">
+		                          <input id="address" type="text" class="validate">
+		                          <label for="address">Address</label>
+		                        </div>
+		                       </div><!-- End input address -->
+		                       <div class="row"><!-- Input phone -->
+		                        <div class="input-field col s12 m12 l12">
+		                          <input id="phone" type="tel" class="validate">
+		                          <label for="phone">Phone Number</label>
+		                        </div>
+		                      </div><!-- End input phone -->
+		                      <div class="row"><!-- Input email -->
+		                        <div class="input-field col s12 m12 l12">
+		                          <input id="email" type="email" class="validate">
+		                          <label for="email">Email</label>
+		                        </div>
+		                     </div><!-- End input email -->
+		                     <div class="row"><!-- Input status -->
+						        <div class="input-field col s12 m12 l12">
+		                          <input id="status" type="text" class="validate">
+		                          <label for="status">Status</label>
+		                        </div>
+						      </div><!-- End input status -->
+		                       <div class="row"><!-- Input genre -->
+		                       	<div class="col s3 m3 l3">
+		                       		<p>
+		                       			<label class="new">Genre</label>
+		                       		</p>
+		                       	</div>
+		                       	<div class="col s4 m4 l4">
+		                       		<p>
+								      <input type="checkbox" id="male" />
+								      <label class="new" for="male">Male</label>
+								    </p>
+		                       	</div>
+		                       	<div class="col s4 m4 l4">
+								    <p>
+								      <input type="checkbox" id="female" />
+								      <label class="new" for="female">Female</label>
+								    </p>
+		                       	</div>
+		                       </div><!-- End input genre -->
+		                    </form><!-- End form input create data user -->
 					    </div>
 					    <div class="modal-footer">
-					      <a href="#" class="btn">Save</a>
+					    	<a href="" class="waves-effect waves-light btn left modal-close"><i class="material-icons left">arrow_back</i>Cancel</a>
+					    	<a href="" class="waves-effect waves-light btn right"><i class="material-icons left">check</i>Save</a>
 					    </div>
 					  </div>
-
 					<!-- /Modal add-->
 
 			      <div class="col s6 m6 l6"><!-- button search -->
@@ -65,6 +121,9 @@
         	</li>
 	    </ul>
       </div>  
+</template>
+
+<template name="layouts_singleRight">
 
       <div class="col s12 m12 l6">
         <div class="card">
@@ -143,10 +202,5 @@
           </ul>
         </div>
       </div>  
-
-    </div> 
-
-</div>
-
-
+      
 </template>
